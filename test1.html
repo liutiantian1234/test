@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>123456789</title>
+    <script type="text/javascript">
+        var time;
+        var time1;
+        function leftscroll() {
+            var title = document.title;
+            var first = title.charAt(0);
+            var second = title.substring(1,title.length);
+            document.title = second + first;
+        }
+        function rightscroll() {
+            var title = document.title;
+            var first = title.charAt(8);
+            var second = title.substring(0,title.length-1);
+            document.title = first + second;
+        }
+        function ok() {
+            time = setInterval("leftscroll()",500);
+        }
+        function ll() {
+            time1 = setInterval("rightscroll()", 500);
+        }
+
+        function cancel() {
+            clearInterval(time);
+            clearInterval(time1);
+        }   
+    </script>
+</head>
+<body >
+    <div>
+        <input type="button" value="左转" onclick="ok()"/>
+        <input type="button" value="右转" onclick="ll()" />
+        <input type="button" value="取消" onclick="cancel()" />
+    </div>
+</body>
+</html>
