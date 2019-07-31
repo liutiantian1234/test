@@ -1,33 +1,26 @@
-package test7_29;
+package test7_30;
 
 import java.util.Scanner;
 
 public class circle {
- private  double radius;
+	public  float radius;
+	public circle() {
+		
+	}
+public circle(float radius) {
+		this.radius=radius;
+	}
 
-public circle() {
+	public double getArea() {
+		return radius*radius* Math.PI;
+	}
+	public double getPerimeter() {
+		return 2*radius*Math.PI;
+	}
+	public  void show() {
+		System.out.println("半径:"+radius+" 面积:"+getArea()+" 周长:"+getPerimeter());
+		
 	
-}
-public circle(double radius) {
-	this.radius=radius;
-}
-public  double getArea() {
-	return Math.PI*radius*radius;
-}
-public double getErimeter() {
-	return Math.PI*2*radius;
-}
-public void show() {
-	double area=getArea();
-	double perimeter=getErimeter();
-	System.out.println("圆的半径:"+radius+" 圆的面积:"+area+" 圆的周长:"+perimeter);
-}
+	}
 
-public static  void main(String arg[]) {
-	Scanner sc=new Scanner(System.in);
-	System.out.println("请输入半径：");
-	double r=sc.nextDouble();
-	circle circle1=new circle(r);
-	circle1.show();
-}
 }
